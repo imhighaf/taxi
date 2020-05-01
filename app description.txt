@@ -1,0 +1,156 @@
+Roles:
+One person can be assigned with several roles.
+	- Fleet Owner 
+		. super user (has all other role's rights)
+		. edit shift/transaction
+		. add transaction (income, expense, correction)
+		. edit transaction (income, expense, correction)
+	- Fleet Investor
+		. see reports
+	- Fleet Administrator
+		. add/edit operator/car/person/category/accaunt
+		. assign car's/person's role
+		. add setting property
+		. set settings
+		. configure Open and Close Shift forms
+		. configure Open and Close Shift logics
+		. configure Add Income and Expense forms
+		. configure Income and Expense logics
+		. configure reports
+	- Fleet Controller
+		. open/close working shifts
+		. add expense (specific categories only)
+	- Car Driver (nothing)
+
+Tables:
+	- Cars (can be with personal or business role, fills from Operators with empty role by default)
+		. carID
+		. model
+		. manufacturer
+		. plateNo
+		. color
+		. year
+		. 
+	- CarsState <view> (to store last repair and other recurrence services done with car, e.g. oil change, insurance etc.)
+		. carID
+		. category name
+		. max value
+		. next apply value
+	- Rides (filled from Operators, updated by request. As some past rides can be updated by Operator, old records in the table should be updated too)
+	- Persons
+		. name
+		. surname
+		. role
+		. login
+		. password
+		. 
+	- Shifts
+	- Settings
+		. shift change period (time period when shifts are closing daily)
+		. close shift formula
+		. custom fields
+			.. income per km
+			.. km/miles
+			..
+	- Transactions
+		. personID
+		. created date
+		. amount
+		. shiftID
+		. carID
+		. 
+	- Categories
+		. name
+		. type (income, expense)
+		. recurrence
+		. iteration
+		. based on
+		. warn in
+		. required fields
+	- Operators - organizations which provide orders for execution.
+		. login
+		. password
+		. custom fields
+	- Accounts (Cars, Controllers and other balances)
+		. type
+		. name
+		. Car (nullable)
+		. Controller (nullable)
+		. amount
+		. card number
+		. card owner
+
+
+# Open working shift (Car, Driver, Start km):
+- choose a Car (manually or by QR-code)
+	shows Open Shift form (Car, Driver, Start km-age) if there is no Opened shift for the Car.
+- select a Driver
+- enter Start km-age
+- Click Open_Shift
+	stores Opened on date and time, Driver, Car and Start km-age in Shifts table
+
+# Close working shift (Opened Shift, Oprators sums[], hand orders sum, gas sum, finish km-age, Close shift formula):
+- choose a Car (manually or by QR-code)
+	updates Rides table
+	shows Close Shift form (Car, Driver, Start km-age) if there is Opened shift for the Car.
+	collects completed rides from all Operators filtered by Car.
+	calculates and shows cash, cashless and fee sums (editable) grouped by Operator.
+- enter hand orders sum (rides done without Operators)
+	calculates and shows total (cash+cashless and fee) sums.
+- enter gas sum
+- enter finish km-age
+	calculates and shows (dependently on settings) give/take sum.
+-- (optionally) change rate value
+	recalculates and shows (dependently on settings) give/take sum.
+- Click Close_Shift
+	adds cash income/expense Transaction record (add to Operator's balance).
+	adds cashless income/expense Transaction record (add to Car's balance).
+	update Shift record and links it to the cash and cashless Transactions.
+	update CarsState (km-age).
+-- (optionally) Enable 'Open after close'
+	shows Next driver drop-down.
+-- Click Close_Shift
+	adds cash income/expense Transaction record (add to Operator's balance).
+	adds cashless income/expense Transaction record (add to Car's balance).
+	update Shift record and links it to the cash and cashless Transactions.
+	update CarsState (km-age).
+	opens new Shift with Next driver, current Car and Start km-age = Finish km-age.
+	
+# Add income
+	- income from a Car
+	- income from an Investor
+
+# Add expense
+	- expense for a Car
+	- expense for a Fleet
+
+# Add transfer
+# Add correction
+# Add category
+# Add Car
+# Add Person
+# Add Account
+# Add Operator
+
+Reports:
+	- Income by car
+	- Income by person
+	- Income by fleet
+	- Avg income by car
+	- Avg income by person
+	- total spent by car
+	- total spent by fleet
+	- profit by car
+	- profit by fleet
+	- Transaction List - expandable by Operator
+		. OpenedOn
+		. ClosedOn
+		. Car name (Manufacturer Model)
+		. PlateNo
+		. Tatal Cash
+		. Total Cashless
+		. Total Hand
+		. Tatal
+		. Rides number
+		. Total reported - sum calculated on rides recieved from Operators
+		. 
