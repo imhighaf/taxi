@@ -4,7 +4,6 @@ import Header from './Header';
 
 
 const Dashboard = () => <h2>Dashboard</h2>
-const New = () => <h2>New</h2>
 const Landing = () => <h2>Landing</h2>
 
 const App = () => {
