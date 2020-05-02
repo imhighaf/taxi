@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/build",
   "dependencies": {
     "http-proxy-middleware": "^1.0.3",
     "react": "^16.13.1",
