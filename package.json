@@ -9,7 +9,10 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm i --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",
@@ -20,5 +23,8 @@
     "nodemon": "^2.0.3",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0"
-  }
+    },
+    "devDependencies": {
+      "concurrently": "^5.2.0"
+    }
 }
