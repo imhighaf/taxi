@@ -1,10 +1,32 @@
 .dock {
-    display:flex;
+    display: flex;
     position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: grey;
-   color: white;
-   text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .button {
+        display: flex;
+        width: 60px;
+        height: 60px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: lightskyblue;
+        }
+        span {
+
+        }
+    }
 }

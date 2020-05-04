@@ -5,21 +5,23 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import './app.scss';
-import Dock from './Dock';
 import LoginScreen from './Login';
+import Screen from './Screen'
 import ProtectedRoute from './ProtectedRoute';
-import Auth from './Auth'
  
-const history = createBrowserHistory();
-const Dashboard = () => <h2>DAshboard</h2>
+
 const Logout = () => {
     return <a  href="/api/logout">Logout</a>
 }
 
+const LogoutScreen = () => <Screen><Logout /></Screen>
+
 class App extends Component {
     async componentDidMount() {
         const user = await this.props.fetchUser()
+        console.log('app mounted, user:', user);
     }
+
 
     render() {
         return (
@@ -30,7 +32,7 @@ class App extends Component {
                        
                         <Route path="/login" exact component={LoginScreen}></Route>
               
-                        <ProtectedRoute path="/home" excat component={Logout}></ProtectedRoute>
+                        <ProtectedRoute path="/home" excat component={LogoutScreen}></ProtectedRoute>
 
                         <Route path='*'><Redirect to="/home" /></Route>
                     </Switch>
