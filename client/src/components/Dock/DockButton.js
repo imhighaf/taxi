@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 function DockButton(props) {
     const {path, label, isActive} = props;
     return (
-        // <Link to='/'>
+
             <div className="button">
                 <img></img>
                 <div>{props.label}</div>
             </div>
-        // </Link>
+      
     )
 }
 
