@@ -1,21 +1,26 @@
 import texts from '../../constants/translations';
+import driver from './icons/driver.png';
+import driverInactive from './icons/driver-bw.png';
 
 const buttons = [
     {
         label: texts.CARS,
-        path: '/cars'
+        path: '/cars',
+        
     },
     {
         label: texts.SHIFTS_LOG,
-        path: '/log'
+        path: '/log',
     },
     {
         label: texts.DRIVERS,
-        path: '/drivers'
+        path: '/drivers',
+        img: driver,
+        imgInactive: driverInactive,
     },
     {
         label: texts.MENU,
-        path: '/menu'
+        path: '/menu',
     },
 ];
 

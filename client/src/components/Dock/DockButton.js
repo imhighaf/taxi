@@ -4,14 +4,15 @@ import { Link } from 'react-router-dom';
 
 
 function DockButton(props) {
-    const {path, label, isActive} = props;
+    const { path, label, img, imgInactive, isActive } = props;
+    console.log(img)
     return (
 
-            <div className="button">
-                <img className="img"></img>
-                <div className="label">{label}</div>
-            </div>
-      
+        <div className="button">
+            <img className="img" src={imgInactive} />
+            <div className="label">{label}</div>
+        </div>
+
     )
 }
 

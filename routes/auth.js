@@ -10,7 +10,8 @@ module.exports = (app) => {
         passport.authenticate('google'),
         (req, res) => {
            // res.send(req.user);
-            res.redirect('/')
+            res.redirect('/car/123')
+            //res.redirect('/')
         }
     );
 

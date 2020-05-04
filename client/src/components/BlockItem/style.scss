@@ -1,0 +1,35 @@
+@import "../../constants/colors.scss";
+
+.block-label {
+    text-transform: uppercase;
+    color: $secondary-text;
+    font-size: 13px;
+    margin: 25px auto 5px 10px;
+}
+
+.block {
+    .block-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 20px;
+        background-color: $panel;
+        border-top: 1px solid $divider;
+        padding: 4px 15px 4px 15px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+
+        .label {
+            color: $main-text;
+        }
+
+        .value {
+            color: $secondary-text;
+        }
+    }
+    .block-item:last-child{
+        border-bottom: 1px solid $divider;
+    }
+}

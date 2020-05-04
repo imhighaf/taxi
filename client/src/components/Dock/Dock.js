@@ -10,7 +10,7 @@ class Dock extends Component {
 
         return (
             <div className="dock">
-                {buttons.map(btn => <DockButton label={btn.label} />)}
+                {buttons.map(button => <DockButton key={button.label} {...button} />)}
             </div>
         )
     }

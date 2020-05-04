@@ -20,18 +20,19 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        padding-top:3px;
 
         .img {
             height: 38px;
             width: 38px;
+            box-sizing: border-box;
             border-radius: 50%;
-            background-color: lightskyblue;
+           // border: 1px solid $secondary-text;
         }
         .label {
             font-size: 11px;
             letter-spacing: 1px;
             line-height: 12px;
+            font-weight: 200;
             color: $secondary-text;
         }
     }

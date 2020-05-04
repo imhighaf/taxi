@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './style.scss';
+import logo from './taxi-2.svg';
 import * as actions from '../../actions';
 
 const LoginScreen = (props) => {
@@ -11,7 +12,9 @@ const LoginScreen = (props) => {
     }
     const loginPage = (
         <div className="loginScreen">
-            {<a className="loginButton" href="/auth/google">Login</a>}
+            {<a className="loginButton" href="/auth/google">
+                <img src={logo} width="200px"></img>
+            </a>}
         </div>
     )
 

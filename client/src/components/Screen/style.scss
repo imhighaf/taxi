@@ -1,9 +1,40 @@
-@import '../../constants/colors.scss';
+@import "../../constants/colors.scss";
 .screen {
     display: flex;
     flex: 1;
     flex-direction: column;
+    overflow: hidden;
+    .header {
+        display: flex;
+        height: 30px;
+        background-color: $panel;
+        border-bottom: 1px solid $divider;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 4px 10px;
+
+
+        .back {
+            color: $action-text;
+            .arrow {
+                border: solid $action-text;
+                border-width: 0 2px 2px 0;
+                display: inline-block;
+                padding: 3px;
+                transform: rotate(135deg);
+                position: relative;
+                bottom:2px;
+                margin-right: 5px;
+            }
+        }
+
+        .title {
+            color: $main-text;
+        }
+    }
     .content {
-       background-color: $background;
+        background-color: $background;
+        overflow: scroll;
     }
 }
