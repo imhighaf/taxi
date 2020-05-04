@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
+//const cors = require('cors');
 
 require('./models/User');
 require('./services/passport');
@@ -20,6 +21,7 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
+//app.use(cors());
 
 require('./routes/auth')(app);
 
@@ -35,5 +37,3 @@ if (process.env.NODE_ENV === 'production') {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT);
-
-//"homepage": "http://taxi-dyapchiki.herokuapp.com/client/build",
