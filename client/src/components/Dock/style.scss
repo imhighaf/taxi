@@ -1,10 +1,12 @@
+@import '../../constants/colors.scss';
 .dock {
     display: flex;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: grey;
+    background-color: $panel;
+    border-top: 1px solid $divider;
     color: white;
     text-align: center;
     height: 60px;
@@ -18,15 +20,19 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        padding-top:3px;
 
-        img {
-            height: 40px;
-            width: 40px;
+        .img {
+            height: 38px;
+            width: 38px;
             border-radius: 50%;
             background-color: lightskyblue;
         }
-        span {
-
+        .label {
+            font-size: 11px;
+            letter-spacing: 1px;
+            line-height: 12px;
+            color: $secondary-text;
         }
     }
 }

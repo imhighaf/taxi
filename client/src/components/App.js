@@ -25,7 +25,7 @@ class App extends Component {
 
     render() {
         return (
-            <div className="wrapper">
+            <div id="app" className="">
                 <BrowserRouter>
                     <Switch>
                         <Route path="/" exact><Redirect to="/home" /></Route>

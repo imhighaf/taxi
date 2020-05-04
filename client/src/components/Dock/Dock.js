@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import DockButton from './DockButton';
+import buttons from './buttons';
 import './style.scss';
-
-
-const buttons = [1, 2, 3, 4]
 
 
 class Dock extends Component {
@@ -12,7 +10,7 @@ class Dock extends Component {
 
         return (
             <div className="dock">
-                {buttons.map(btn => <DockButton label={btn} />)}
+                {buttons.map(btn => <DockButton label={btn.label} />)}
             </div>
         )
     }
@@ -20,8 +18,4 @@ class Dock extends Component {
 }
 
 
-function mapStateToProps({ auth }) {
-    return { auth }
-}
-
-export default connect(mapStateToProps)(Dock);
+export default connect(null)(Dock);

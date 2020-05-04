@@ -8,8 +8,8 @@ function DockButton(props) {
     return (
 
             <div className="button">
-                <img></img>
-                <div>{props.label}</div>
+                <img className="img"></img>
+                <div className="label">{label}</div>
             </div>
       
     )
