@@ -8,19 +8,15 @@
 }
 
 .block {
-    .block-item {
+
+    .item {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        height: 30px;
-        background-color: $panel;
+        min-height: 30px;
+        background-color: $background;
         border-top: 1px solid $divider;
         padding: 4px 15px 4px 15px;
-        font-size: 18px;
-        line-height: 30px;
-        font-weight: 300;
-        //letter-spacing: 0.5px;
-
         .label {
             color: $main-text;
         }
@@ -28,6 +24,14 @@
         .value {
             color: $secondary-text;
         }
+    }
+    .item-panel {
+        background-color: $panel;
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 300;
+
+        
     }
     .block-item:last-child{
         border-bottom: 1px solid $divider;

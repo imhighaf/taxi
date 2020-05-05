@@ -7,6 +7,7 @@ import * as actions from '../actions';
 import './app.scss';
 import LoginScreen from './Login';
 import CarDetailsScreen from './CarDetailsScreen';
+import ShiftsScreen from './ShiftsScreen';
 import Screen from './Screen'
 import ProtectedRoute from './ProtectedRoute';
 
@@ -43,10 +44,11 @@ class App extends Component {
                         <Route path="/" exact><Redirect to="/home" /></Route>
                         <Route path="/login" exact component={LoginScreen}></Route>
 
-                        <ProtectedRoute path="/home" excat component={HomeScreen}></ProtectedRoute>
-                        <ProtectedRoute path="/car/:id" excat component={CarDetailsScreen}></ProtectedRoute>
+                        <ProtectedRoute path="/home" exact component={ShiftsScreen}></ProtectedRoute>
+                        {/* <ProtectedRoute path="/home" exact component={HomeScreen}></ProtectedRoute> */}
+                        <ProtectedRoute path="/car/:id" exact component={CarDetailsScreen}></ProtectedRoute>
 
-                        <Route path='*'><Redirect to="/home" /></Route>
+                        {/* <Route path='*'><Redirect to="/home" /></Route>  */}
                     </Switch>
                 </BrowserRouter>
 

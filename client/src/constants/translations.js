@@ -1,11 +1,13 @@
 module.exports = {
     CARS: 'Машины',
+    SHIFTS_CHANGE: 'Пересменка',
     SHIFTS_LOG: 'Журнал',
     DRIVERS: 'Водители',
     MENU: 'Меню',
     SERVICE: 'Сервис',
     INSURANCE: 'Страховка',
     BACK: 'Назад',
+
 
     mileage: 'Пробег',
     serviceGBO: 'Сервис ГБО',

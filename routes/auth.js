@@ -9,9 +9,8 @@ module.exports = (app) => {
     app.get('/auth/google/callback',
         passport.authenticate('google'),
         (req, res) => {
-           // res.send(req.user);
-            res.redirect('/car/123')
-            //res.redirect('/')
+            //res.redirect('/home');
+            res.redirect('/')
         }
     );
 
@@ -22,8 +21,6 @@ module.exports = (app) => {
     app.get('/api/logout', (req, res) => {
         req.logout();
         console.log('logged out!!!!')
-        //res.send({logged: 'out'})
-        //res.redirect
        res.redirect('/');
     })
 

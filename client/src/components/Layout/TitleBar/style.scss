@@ -1,0 +1,13 @@
+@import '../../../constants/colors.scss';
+
+.title-bar {
+    display: flex;
+    padding: 20px 12px 5px;
+    background-color: $background;
+
+    .title {
+        color: $secondary-text;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+}

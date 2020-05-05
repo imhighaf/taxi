@@ -9,9 +9,10 @@ const BlockLabel = (props) => {
     return <div className="block-label">{props.children}</div>
 }
 
-const BlockItem = (props) => {
+const Panel = (props) => {
+    const classes = cn('item', { 'item-panel': props.panel }, props.classes)
     return (
-        <div className="block-item">
+        <div className="item item-panel">
             <div className="label">{props.label}</div>
             {props.value && <div className="value">{props.value}</div>}
             {props.action && <div className="action">&gt;</div>}
@@ -19,8 +20,9 @@ const BlockItem = (props) => {
     )
 }
 
+
 export default class Block extends Component {
-    static Item = BlockItem
+    static Panel = Panel;
     static Label = BlockLabel;
 
     render() {

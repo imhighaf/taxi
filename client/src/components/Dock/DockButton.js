@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 //import './style.scss';
 
 
 function DockButton(props) {
-    const { path, label, img, imgInactive, isActive } = props;
-    console.log(img)
+    const { path, label, img, imgInactive, isActive, history } = props;
     return (
 
-        <div className="button">
+        <div className="button" onClick={() => history.push(path)}>
             <img className="img" src={imgInactive} />
             <div className="label">{label}</div>
         </div>
@@ -16,4 +15,4 @@ function DockButton(props) {
     )
 }
 
-export default DockButton;
+export default withRouter(DockButton);

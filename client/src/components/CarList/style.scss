@@ -1,0 +1,10 @@
+@import "../../constants/colors.scss";
+
+.cars-list {
+    & > div {
+        border-top: 1px solid $divider;
+    }
+    & > div:last-child {
+        border-bottom: 1px solid $divider;
+    }
+}

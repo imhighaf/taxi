@@ -8,11 +8,10 @@ import Dock from '../Dock';
 
 
 function Header(props) {
-    console.log('screeeen', props)
     return (
         <div className="header">
             <div className="back"
-                onClick={props.history.goBack}
+                
             >
                 <i className="arrow"></i>{translations.BACK}
             </div>

@@ -4,8 +4,8 @@ import driverInactive from './icons/driver-bw.png';
 
 const buttons = [
     {
-        label: texts.CARS,
-        path: '/cars',
+        label: texts.SHIFTS_CHANGE,
+        path: '/change-shift',
         
     },
     {
