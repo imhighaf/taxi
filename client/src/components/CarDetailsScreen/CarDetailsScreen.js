@@ -37,7 +37,35 @@ function CarDetailsScreen(props) {
             <Block>
                 <Block.Item label={texts.insuranceOSAGO} value={car.insuranceOSAGO}></Block.Item>
                 <Block.Item label={texts.insuranceKASKO} value={car.insuranceKASKO}></Block.Item>
-                
+            </Block>
+
+
+            <Block.Label>{texts.INSURANCE}</Block.Label>
+            <Block>
+                <Block.Item label={texts.serviceGBO} value={car.serviceGBO}></Block.Item>
+                <Block.Item label={texts.engineOil} value={car.engineOil}></Block.Item>
+                <Block.Item label={texts.candles} value={car.candles}></Block.Item>
+                <Block.Item label={texts.boxOil} value={car.boxOil}></Block.Item>
+                <Block.Item label={texts.valveAdjustment} value={car.valveAdjustment}></Block.Item>
+                <Block.Item label={texts.gearboxGBO} value={car.gearboxGBO}></Block.Item>
+            </Block>
+            <Block.Label>{texts.INSURANCE}</Block.Label>
+            <Block>
+                <Block.Item label={texts.serviceGBO} value={car.serviceGBO}></Block.Item>
+                <Block.Item label={texts.engineOil} value={car.engineOil}></Block.Item>
+                <Block.Item label={texts.candles} value={car.candles}></Block.Item>
+                <Block.Item label={texts.boxOil} value={car.boxOil}></Block.Item>
+                <Block.Item label={texts.valveAdjustment} value={car.valveAdjustment}></Block.Item>
+                <Block.Item label={texts.gearboxGBO} value={car.gearboxGBO}></Block.Item>
+            </Block>
+            <Block.Label>{texts.INSURANCE}</Block.Label>
+            <Block>
+                <Block.Item label={texts.serviceGBO} value={car.serviceGBO}></Block.Item>
+                <Block.Item label={texts.engineOil} value={car.engineOil}></Block.Item>
+                <Block.Item label={texts.candles} value={car.candles}></Block.Item>
+                <Block.Item label={texts.boxOil} value={car.boxOil}></Block.Item>
+                <Block.Item label={texts.valveAdjustment} value={car.valveAdjustment}></Block.Item>
+                <Block.Item label={texts.gearboxGBO} value={car.gearboxGBO}></Block.Item>
             </Block>
         </Screen>
     )

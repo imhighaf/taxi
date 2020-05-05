@@ -11,8 +11,8 @@
         border-bottom: 1px solid $divider;
         flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
         padding: 4px 10px;
+        margin-bottom: -1px;
 
 
         .back {
@@ -30,7 +30,12 @@
         }
 
         .title {
+            position: absolute;
             color: $main-text;
+            width: 200px;
+            left: calc(50% - 100px);
+            display: flex;
+            justify-content: center;
         }
     }
     .content {

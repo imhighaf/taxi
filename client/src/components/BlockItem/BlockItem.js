@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import cn from 'classnames';
 import texts from '../../constants/translations';
 import Screen from '../Screen'
 import './style.scss';
@@ -19,7 +20,7 @@ const BlockItem = (props) => {
 }
 
 export default class Block extends Component {
-    static Item = BlockItem;
+    static Item = BlockItem
     static Label = BlockLabel;
 
     render() {

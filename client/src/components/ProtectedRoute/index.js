@@ -25,19 +25,20 @@ import { Route, Redirect, withRouter } from 'react-router-dom';
 
 
 
+
 const ProtectedRoute = ({ component: Component, auth, ...rest }) => {
-  console.log('route auth', auth)
+  console.log('route auth', rest)
   return (
     <Route {...rest} render={(props) => (
       auth
         ? <Component {...props} />
         : (<Redirect to={{
           pathname: '/login',
-          state: { from: props.location }
+          state: { fromRedirect: true }
         }} />)
     )} />
   )
-} 
+}
 function mapStatetToProps({ auth }) {
   return { auth }
 }
