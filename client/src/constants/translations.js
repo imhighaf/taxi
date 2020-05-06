@@ -8,14 +8,20 @@ module.exports = {
     INSURANCE: 'Страховка',
     BACK: 'Назад',
 
+    model: 'Модель',
+    year: 'Год',
+    brand: 'Марка',  
+    bodyType: 'Кузов',
+    color: 'Цвет',
+    comfortLevel: 'Класс Авто',
 
     mileage: 'Пробег',
-    serviceGBO: 'Сервис ГБО',
-    engineOil: 'Масло двигателя',
-    candles: 'Свечи',
-    boxOil: 'Масло коробки',
-    valveAdjustment: 'Регулировка клапанов',
-    gearboxGBO: 'Редуктор ГБО',
+    serviceOilEngine: 'Масло двигателя',
+    serviceOilGears: 'Масло коробки',
+    serviceLPG: 'Сервис ГБО',
+    serviceValve: 'Регулировка клапанов',
+    serviceSparkPlug: 'Свечи',
+    serviceGearboxLPG: 'Редуктор ГБО',
     insuranceKASKO: ' Страховка КАСКО',
     insuranceOSAGO: 'Страховка ОСАГО'
 };

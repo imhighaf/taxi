@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "taxi-prod-276406",
+  "private_key_id": "d3062101abd6496d9971f92974f95f3fa077bc26",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChDTcsXPls1TEa\n61B2h766sZPFBwaZ5la8/n8n9tzmNPuZaOm1MOoiGLZwe0Hj6XYFUmVLueVwCvvn\nt976UQk9zWiM6WFvHGQhbRtLImXPws9oMhxKsMphXl8bePk8U3Rm6PSnmKHrc0Yj\nQQSmG+KPh2UD0CYL9CkupAgThXDUiVCgXh5gAHIhNB6BY0ZUQHeyuWgpDimbnwC1\nkQp6WaWEFudgoX0LnM+szY4/DWcrHiZP7uVW9/goXx4HQ9izhpks4zT0iGu+NQW6\nKwb5eeUUsr4O8nkJGM51iU4rU0YLX2mQVeQ3bdJs9mQ3z9IdBtlEp4HbQUiSZafE\nqT5T69x/AgMBAAECggEARaCOiWX6ydQTwkUYyN3gFhu+vJBQiMm+F0BZ3f/KudYP\nLmBepeCrYKlZeqC3OF8PELbyJz6L1JhTFvd19beCLM940270mlJmcdMXWTDaXmul\nOrFrbNko7dacfKac7jlQWkt9tlV1L3NrT8OEzIHCvfW1tOPRBxr8kPcGrNXklWXF\ntj2s4GrSo4L06/DSjc2/N4HPFH3t2Q/t9Qm76y9nR92Ac4Azsn+e1OSKgeH4d1VA\nG7lxqixIyUmZMmT0mXVve6Q5hxV7h40rj8kziHz7cndP7MJq2QXTe0SHdcp+bqMG\neBlr+8dK7uZNfb+dbt3qaVIMzm+KvjyL2O4bfETMLQKBgQDiOrQQu2dU5TApcHMr\ns2nBElbujbmcMs77BVTO1SVNpYRFOnoTsr9CgA/Jpu2GM2laqTO4I9m37zHgqE0f\nFH8c4zt3DD8ta6xpWoM3KzWNqGGpU7pz2lKQIANwEO3izYPKh5b4RGtkYGjIOIeL\nJ4VvgCdYl+/Vsag5wsnDllCbUwKBgQC2Psg5tP2heKCkfH2/4barcpbddiZybiZg\nWSuDf7I+v8BDVUxnjmxowOueQP5OIO6c0BXBf6EJTnb8SkkFyygz38PNwuzgChLf\nIFx8j/W1WEv7SG1x1P+oa6Zu3OOZU02tN+bVh/B75fh2C1D5+ppOp7uW3p4EKqQf\nCh43ZvFApQKBgCi8e1ob9MJjtqVvmz1+RAfBHqg8GvUWbRDkZ94KoXn22PeCTSMo\n56m4157vEQw+S7VIjIiW5Ahr6OZUR/bVwQHZpQaNzP6Hyfb6lnAjtrP4YwWTjxp3\ncLCFIzlVwxA5A4c/nR69az0a4yNSko2rIyrtv6gDS+uF3w3vlldCxOcDAoGACY91\nlYFnJMddNgPJ3P0MRiY2v9to3OvmW3uSCs3yHdSVU3LwFSaljUFBmwWx0YtsuRE5\ncvMtEX3qRAXpmsIzk7UTYoHtRzuADfB2qZoru52sLrx38VbJKp6rFnnD/tEd7A5Y\nr6738Kf5xseFMffxjFrEPn/jLjjGb1Jqj2F5GnkCgYBbRCHmxabQCBxjw7NBFB4j\nQa/yW6aoaa7BoYogwRjkKwLbbd8WIxdgfGBLrOZwPqf0PKBciiSJMrQtdKjsWuWI\nasSyRkDCe7mBzExo24Nkg21spOZWj9hQtJytA8OffU0pVoc4tGpnFWMUx67KdFZt\n0P8tjNykdAOjxqEd6mPbTw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "dyapchikprod@taxi-prod-276406.iam.gserviceaccount.com",
+  "client_id": "105381395047679335615",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dyapchikprod%40taxi-prod-276406.iam.gserviceaccount.com"
+}

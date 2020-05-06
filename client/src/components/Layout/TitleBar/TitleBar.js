@@ -8,6 +8,7 @@ function TitleBar(props) {
 
         <div className="title-bar">
             <div className="title">{title}</div>
+            {sub && <div className="sub">{sub}</div>}
         </div>
 
     )

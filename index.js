@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
+
+const carsRoute = require('./routes/cars');
 //const cors = require('cors');
 
 require('./models/User');
@@ -24,6 +26,8 @@ app.use(passport.session());
 //app.use(cors());
 
 require('./routes/auth')(app);
+//require('./routes/db')(app);
+app.use('/api/cars', carsRoute);
 
 if (process.env.NODE_ENV === 'production') {
     const path = require('path');

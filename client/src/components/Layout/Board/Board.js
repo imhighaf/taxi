@@ -8,11 +8,11 @@ function Board(props) {
     return (
 
         <div className="board">
-            <div className="titles" onClick={()=>onClickItem(item)}>
+            <div className="titles">
                 <div className="title">{title}</div>
                 <div className="sub">{sub}</div>
             </div>
-            <div className="action" >{icon}</div>
+            <div className="action" onClick={() => onClickItem(item)}>{icon}</div>
         </div>
 
     )

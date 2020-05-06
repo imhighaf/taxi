@@ -11,11 +11,12 @@ function CarList(props) {
     return (
         <div className="cars-list">
             {cars.map(car => {
+                const title = `${car.brand} ${car.model}`
                 return (
                     <Board
-                        key={car.no}
-                        title={car.model}
-                        sub={car.no}
+                        key={car.id}
+                        title={title}
+                        sub={car.id}
                         icon={<Icon.Right />}
                         item={car}
                         onClickItem={onClickItem}
