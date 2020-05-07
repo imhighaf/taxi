@@ -1,6 +1,6 @@
 import texts from '../../constants/translations';
-import driver from './icons/driver.png';
-import driverInactive from './icons/driver-bw.png';
+import driver from './icons/activePersons.png';
+import driverInactive from './icons/persons.png';
 
 const buttons = [
     {
