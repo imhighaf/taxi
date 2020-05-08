@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import texts from '../../constants/translations';
 import Screen from '../Screen'
-import { TitleBar, Board } from '../Layout';
+import { TitleBar, Board, BorderedList } from '../Layout';
 import Icon from '../Icon';
 import { capitalize } from '../../utils';
 //import './style.scss';
@@ -30,19 +30,38 @@ function CarDetailsScreen(props) {
     return (
         <Screen>
             <TitleBar title={title} sub={car.id} />
-            <Board title={texts.mileage} value={car.mileage} />
+            <BorderedList>
+                <Board title={texts.mileage} value={car.mileage} />
+            </BorderedList>
 
             <TitleBar title={texts.SERVICE} />
-            {car.service.map(service => {
-                return (
-                    <Board key={service._id}
-                        title={capitalize(service.title)}
-                        actionIcon={<Icon.Right />}
-                        warningIcon={isMissedService(service, car) || isUpcomingService(service, car)}
-                        sub={`Следующий сервис ${service.next}`}
-                    ></Board>
-                )
-            })}
+            <BorderedList>
+                {car.service.map(service => {
+                    return (
+                        <Board key={service._id}
+                            title={capitalize(service.title)}
+                            actionIcon={<Icon.Right />}
+                            warningIcon={isMissedService(service, car) || isUpcomingService(service, car)}
+                            sub={`Следующий сервис ${service.next}`}
+                            value={service.next - car.mileage}
+                        ></Board>
+                    )
+                })}
+            </BorderedList>
+            <TitleBar title={texts.INSURANCE} />
+            <BorderedList>
+                {car.insurance.map(insurance => {
+                    return (
+                        <Board key={insurance._id}
+                            title={capitalize(insurance.title)}
+                            actionIcon={<Icon.Right />}
+                           // warningIcon={isMissedService(insurance, car) || isUpcomingService(service, car)}
+                          //  sub={`Следующий сервис ${service.next}`}
+                            //value={service.next - car.mileage}
+                        ></Board>
+                    )
+                })}
+            </BorderedList>
         </Screen>
     )
 }
