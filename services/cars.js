@@ -1,9 +1,9 @@
-const db = require('../db');
+const mongoose = require('mongoose');
+require('../models/Car');
+const Cars = mongoose.model('cars');
 
-const getAll = async () => {
-   const sheet = await db.getSheet('cars')
-   return await db.getRows(sheet);
-}
+const getAll = async () => await Cars.find().exec();
+
 
 module.exports = {
     getAll

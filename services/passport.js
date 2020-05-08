@@ -23,12 +23,16 @@ passport.use(new GoogleStrategy({
 },
     async (accessToken, refreshToken, profile, done) => {
         const existingUser = await User.findOne({ googleId: profile.id });
-        
+
         if (existingUser) {
             return done(null, existingUser);
         }
 
-        const savedUser = await new User({ googleId: profile.id }).save()
+        const savedUser = await new User({
+            googleId: profile.id,
+            email: profile._json.email
+        }).save();
+
         done(null, savedUser);
     })
 );

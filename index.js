@@ -7,10 +7,10 @@ const passport = require('passport');
 const carsRoute = require('./routes/cars');
 //const cors = require('cors');
 
-require('./models/User');
+require('./models/User'); 
 require('./services/passport');
 
-mongoose.connect(keys.mongoURI);
+mongoose.connect(keys.mongoURI, { autoIndex: false });
 
 const app = express();
 
