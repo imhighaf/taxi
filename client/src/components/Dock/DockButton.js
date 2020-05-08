@@ -8,7 +8,7 @@ function DockButton(props) {
     return (
 
         <div className="button" onClick={() => history.push(path)}>
-            <img className="img" src={imgInactive} />
+            <img className="img" src={img} />
             <div className="label">{label}</div>
         </div>
 

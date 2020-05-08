@@ -11,10 +11,10 @@ function Board(props) {
                 <div className="title">{title}</div>
                 <div className="sub">{sub}</div>
             </div>
-            <div className="action-block">
-                {warningIcon && <div className="warning">{warningIcon}</div>}
+            <div className="action-block" onClick={() => action && action(item)}>
+                {warningIcon && <img className="warning" width="20px" src={warningIcon} />}
                 {value && <div className="value">{value}</div>}
-                {action && <div className="action" onClick={() => action(item)}>{actionIcon}</div>}
+                {actionIcon && <div className="action" >{actionIcon}</div>}
             </div>
 
         </div>

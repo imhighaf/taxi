@@ -5,8 +5,8 @@ import Icon from '../Icon';
 import info from './info.svg';
 import './style.scss';
 
-//const warningIcon = import (./)
-//const errIcon = import(../)
+import warningIcon from '../../icons/warning.png'; 
+import errorIcon from '../../icons/error.png'; 
 
 import { capitalize } from '../../utils';
 
@@ -21,10 +21,10 @@ function findWarningService(car) {
 
 const setWarningIcon =  (car)=>  {
     if (findBehindHandService(car)){
-        return 'errIcon';
+        return errorIcon;
     }
     if (findWarningService(car)) {
-        return 'warningIcon';
+        return warningIcon;
     }
     return;
 }
@@ -43,9 +43,9 @@ function CarList(props) {
                         key={car.id}
                         title={title}
                         sub={car.id}
+                        item={car}
                         warningIcon={setWarningIcon(car)}
                         actionIcon={<Icon.Right />}
-                        item={car}
                         action={onClickItem}
                     />
                 )
